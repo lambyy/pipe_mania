@@ -39,10 +39,10 @@ This project will be implemented using:
 
 Day 1: Setup project with necessary Node modules, including configuring webpack and creating a package.json file. Write a basic entry file. Start building basic `board.js` with navigation and selection.
 
-Day 2: Finish building `board.js` and rendering it to the screen. Create `pipe.js` pieces that handle pipe flow direction logic and has 6 variations of pipe sections.
+Day 2: Finish building `board.js` and rendering it to the screen. Create `pipe.js` pieces that handle pipe flow direction logic and has 6 variations of pipe sections. Pipe pieces will keep track of the two directions they accept flow (i.e. left, right) and a differential of where they lead the flow.
 
 Day 3: Combine `board.js` and `pipe.js` into a `game.js` file. `game.js` handles pipe flow logic, whether pipe sections are properly connected to allow flow.
 
-Day 4: Put it all together, including calculating score, timer and level.
+Day 4: Put it all together, including calculating score, timer and level. The timer will indicate when the water will begin flowing through the currently connected pipe sections.
 
 
