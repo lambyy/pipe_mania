@@ -1,0 +1,9 @@
+img {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+canvas {
+  /*margin: 0 auto;*/
+}
