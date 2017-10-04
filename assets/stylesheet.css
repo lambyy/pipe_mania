@@ -7,3 +7,14 @@ img {
 canvas {
   /*margin: 50px 25%;*/
 }
+
+#timerProgress {
+  width: 60%;
+  background-color: grey;
+}
+
+#timerBar {
+  width: 1%;
+  height: 30px;
+  background-color: green;
+}
