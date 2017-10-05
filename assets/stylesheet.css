@@ -1,3 +1,7 @@
+h1 {
+  text-align: center;
+}
+
 img {
   position: absolute;
   top: 0;
@@ -8,8 +12,22 @@ canvas {
   /*margin: 50px 25%;*/
 }
 
+.hidden {
+  opacity: 0;
+}
+
+.instructions img {
+  opacity: 1;
+}
+
+#start {
+  position: absolute;
+  left: 50%;
+  margin: auto;
+}
+
 #timerProgress {
-  width: 60%;
+  width: 50%;
   background-color: grey;
 }
 
