@@ -1,5 +1,18 @@
+body, h1, div, p {
+  margin: 0;
+  padding: 0;
+}
+
+#pipe-mania {
+  display: grid;
+  grid-template-columns: 1fr 700px 1fr;
+  grid-template-rows: 70px 500px 1fr;
+}
+
 h1 {
+  grid-area: 1 / 2;
   text-align: center;
+  padding: 15px;
 }
 
 .images img {
@@ -9,27 +22,30 @@ h1 {
 }
 
 canvas {
-  /*margin: 50px 25%;*/
+  grid-area: 2 / 2;
+  /*position: relative;*/
+  margin-left: 100px;
 }
 
 .hidden {
   opacity: 0;
 }
 
-.instructions {
-  position: absolute;
+#instructions {
+  grid-area: 2 / 2;
+  /*position: absolute;*/
   width: 100%;
-  /*z-index: -10;*/
+  z-index: 1;
   /*opacity: 1;*/
 }
 
-.instructions p {
+#instructions p {
   text-align: center;
 }
 
 .start-goal {
   display: grid;
-  grid-template-rows: 40px 100px;
+  grid-template-rows: 20px 100px;
   grid-template-columns: 100px 100px;
   grid-column-gap: 1em;
   justify-content: center;
@@ -40,13 +56,28 @@ canvas {
 }
 
 #start {
-  /*position: absolute;
-  left: 50%;*/
+  
   margin: auto;
 }
 
+#content {
+  grid-area: 2 / 2;
+  width: 60px;
+  justify-self: right;
+}
+
+#content div {
+  text-align: center;
+}
+
+#content button {
+  margin-top: 390px;
+}
+
 #timerProgress {
-  width: 50%;
+  grid-area: 3 / 2;
+  justify-self: center;
+  width: 80%;
   background-color: grey;
 }
 

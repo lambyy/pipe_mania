@@ -6,22 +6,34 @@
     <title>Pipe Mania</title>
   </head>
   <body>
-    <h1>PIPE MANIA</h1>
-    <div class="instructions">
-      <p>Attach pipe segments so that water can flow!</p>
-      <p>Arrow keys to navigate the board</p>
-      <p>Spacebar to place the pipe section</p>
-      <p>Connect more segments to earn more points and move on to the next level</p>
-      <div class="start-goal">
-        <p>Start</p>
-        <p>Goal </p>
-        <img src="./assets/6.png">
-        <img src="./assets/7.png">
+    <div id="pipe-mania">
+      <h1>PIPE MANIA</h1>
+      <div id="instructions">
+        <p>Attach pipe segments so that water can flow!</p>
+        <p>Arrow keys to navigate the board</p>
+        <p>Spacebar to place the pipe section</p>
+        <p>Connect more segments to earn more points and move on to the next level</p>
+        <div class="start-goal">
+          <p>Start</p>
+          <p>Goal </p>
+          <img src="./assets/6.png">
+          <img src="./assets/7.png">
+        </div>
+        <p><button id="start">START</button></p>
       </div>
-      <p><button id="start">START</button></p>
+      <canvas id="board"></canvas>
+      <div id="content" class="hidden">
+        <div id="level">Level 1</div>
+        <div id="score">Score: 0</div>
+        <div>Next</div>
+        <button id="restart" disabled="true">
+          RESTART
+        </button>
+      </div>
+      <div id="timerProgress" class="hidden">
+        <div id="timerBar"></div>
+      </div>
     </div>
-    <button id="restart">RESTART</button>
-    <canvas id="board"></canvas>
     <div class="images">
       <img id="dirt" src="./assets/dirt.png">
       <img id="pipe0" src="./assets/0.png">
@@ -31,9 +43,6 @@
       <img id="pipe4" src="./assets/4.png">
       <img id="pipe5" src="./assets/5.png">
       <img id="pipe6" src="./assets/6.png">
-    </dv>
-    <div id="timerProgress">
-      <div id="timerBar"></div>
     </div>
     <script type="application/javascript" src="lib/bundle.js"></script>
   </body>
