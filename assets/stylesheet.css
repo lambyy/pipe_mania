@@ -2,7 +2,7 @@ h1 {
   text-align: center;
 }
 
-img {
+.images img {
   position: absolute;
   top: 0;
   opacity: 0;
@@ -16,13 +16,32 @@ canvas {
   opacity: 0;
 }
 
-.instructions img {
-  opacity: 1;
+.instructions {
+  position: absolute;
+  width: 100%;
+  /*z-index: -10;*/
+  /*opacity: 1;*/
+}
+
+.instructions p {
+  text-align: center;
+}
+
+.start-goal {
+  display: grid;
+  grid-template-rows: 40px 100px;
+  grid-template-columns: 100px 100px;
+  grid-column-gap: 1em;
+  justify-content: center;
+}
+
+.start-goal img {
+
 }
 
 #start {
-  position: absolute;
-  left: 50%;
+  /*position: absolute;
+  left: 50%;*/
   margin: auto;
 }
 
