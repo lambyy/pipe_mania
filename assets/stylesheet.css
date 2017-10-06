@@ -126,8 +126,16 @@ canvas {
   text-align: center;
 }
 
+#content div:nth-child(3) {
+  margin-top: 20px;
+}
+
 #score {
   white-space: nowrap;
+}
+
+#target {
+  margin-top: 200px;
 }
 
 #restart {
@@ -136,7 +144,7 @@ canvas {
 }
 
 #quick-finish {
-  margin-top: 300px;
+  margin-top: 60px;
   margin-left: -20px;
 }
 
