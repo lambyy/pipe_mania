@@ -11,15 +11,21 @@
       <h1>PIPE MANIA</h1>
       <div id="instructions">
         <p>Attach pipe segments so that water can flow!</p>
-        <p>Arrow keys to navigate the board</p>
-        <p>Spacebar to place the pipe section</p>
-        <p>Connect more segments to earn more points and move on to the next level</p>
-        <div class="start-goal">
-          <p>Start</p>
-          <p>Goal </p>
-          <img src="./assets/6.png">
-          <img src="./assets/7.png">
+        <div class="directions">
+          <div class="grid">
+            <p>Navigate</p>
+            <img id="arrows" src="./assets/arrow-keys-icon.svg">
+            <p>Place section</p>
+            <div id="spacebar">Space</div>
+          </div>
+          <div class="start-goal">
+            <img src="./assets/6.png">
+            <img src="./assets/7.png">
+            <p>Start</p>
+            <p>Goal </p>
+          </div>
         </div>
+        <p>Connect more segments to earn more points and move on to the next level!</p>
         <p><button id="start">START</button></p>
       </div>
       <canvas id="board"></canvas>
