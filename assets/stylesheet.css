@@ -147,15 +147,20 @@ canvas {
   height: 200px;
   background-color: white;
   justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 10;
 }
 
 #level-result{
+  padding-top: 50px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
 #next {
-  /*margin: 100px 120px;*/
+  width: 120px;
 }
 
 #timerProgress {
