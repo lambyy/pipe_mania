@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/stylesheet.css"/>
     <title>Pipe Mania</title>
   </head>
@@ -26,9 +27,16 @@
         <div id="level">Level 1</div>
         <div id="score">Score: 0</div>
         <div>Next</div>
-        <button id="restart" disabled="true">
-          RESTART
+        <button id="quick-finish" disabled="true">
+          FINISH LEVEL
         </button>
+        <button id="restart" disabled="true">
+          RESTART LEVEL
+        </button>
+      </div>
+      <div id="result" class="hidden">
+        <p id="level-result">Completed the level!</p>
+        <button id="next">Continue</button>
       </div>
       <div id="timerProgress" class="hidden">
         <div id="timerBar"></div>
