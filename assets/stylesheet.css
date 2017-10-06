@@ -6,7 +6,7 @@ body, h1, div, p {
 
 #pipe-mania {
   display: grid;
-  grid-template-columns: 1fr 720px 1fr;
+  grid-template-columns: 1fr 700px 1fr;
   grid-template-rows: 80px 500px 1fr;
 }
 
@@ -39,8 +39,7 @@ button:hover {
 
 canvas {
   grid-area: 2 / 2;
-  /*position: relative;*/
-  margin-left: 100px;
+  margin-left: 80px;
 }
 
 .hidden {
@@ -131,12 +130,14 @@ canvas {
   white-space: nowrap;
 }
 
-button {
-  margin: 5px;
+#restart {
+  margin-top: 10px;
+  margin-left: -28px;
 }
 
 #quick-finish {
-  margin-top: 360px;
+  margin-top: 300px;
+  margin-left: -20px;
 }
 
 #result {
@@ -154,18 +155,20 @@ button {
 }
 
 #next {
-  margin: 100px 120px;
+  /*margin: 100px 120px;*/
 }
 
 #timerProgress {
   grid-area: 3 / 2;
   justify-self: center;
-  width: 80%;
-  background-color: grey;
+  width: 90%;
+  background-color: #e0e0d1;
+  border-radius: 6px;
 }
 
 #timerBar {
   width: 1%;
   height: 30px;
-  background-color: green;
+  background-color: #00cc66;
+  border-radius: 6px;
 }
