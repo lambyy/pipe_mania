@@ -38,7 +38,7 @@ Pipe.SECTIONS = [
 ``````
 ### Board
 
-The Board class in Pipe Mania handles the logic for tracking flow through Pipes, displaying the board, and determining completion of the round. Starting at the source, Board finds the next position on the grid that the current Pipe leads to. It then evaluates if the pipe at the next position forms a valid connection with the current Pipe using `#checkConnection`. If it does, Board repeats the evaluation for the each subsequent Pipe until it reaches the destination or is unable to form a valid connection.
+The Board class in Pipe Mania handles the logic for tracking flow through Pipes, displaying the board, and determining completion of the round. Starting at the source, Board finds the next position on the grid that the current Pipe leads to. It then evaluates if the pipe at the next position forms a valid connection with the current Pipe using `Pipe#checkConnection`. If it does, Board repeats the evaluation for each subsequent Pipe until it reaches the destination or is unable to form a valid connection.
 
 ### Game
 
