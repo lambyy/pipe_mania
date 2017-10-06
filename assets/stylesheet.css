@@ -183,13 +183,13 @@ canvas {
   grid-area: 3 / 2;
   justify-self: center;
   width: 90%;
-  background-color: #e0e0d1;
+  background-color: #E0E0D1;
   border-radius: 6px;
 }
 
 #timerBar {
   width: 1%;
   height: 30px;
-  background-color: #00cc66;
+  background-color: #00CC66;
   border-radius: 6px;
 }
