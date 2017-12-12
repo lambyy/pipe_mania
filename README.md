@@ -40,6 +40,43 @@ Pipe.SECTIONS = [
 
 The Board class in Pipe Mania handles the logic for tracking flow through Pipes, displaying the board, and determining completion of the round. Starting at the source, Board finds the next position on the grid that the current Pipe leads to. It then evaluates if the pipe at the next position forms a valid connection with the current Pipe using `Pipe#checkConnection`. If it does, Board repeats the evaluation for each subsequent Pipe until it reaches the destination or is unable to form a valid connection.
 
+`````
+checkWin(interval) {
+    let flowDir = this.currentPipe.getFlowDir('out');
+    let move = Pipe.MOVES[flowDir];
+    let nextPos = [this.currentPos[0] + move[0], this.currentPos[1] + move[1]];
+    let nextPipe;
+    if (this.boundary(nextPos)) {
+      nextPipe = this.grid[nextPos[0]][nextPos[1]];
+    }
+
+    if (nextPipe && this.currentPipe.checkConnection(nextPipe)) {
+      nextPipe.resetFlow();
+      this.points += 10;
+      let flowIn = Pipe.complement(flowDir);
+      nextPipe.setFlowIn(flowIn);
+      let flowOut = nextPipe.getFlowDir("");
+      if (flowOut) {
+        nextPipe.setFlowOut(flowOut);
+      }
+      nextPipe.fill = true;
+
+      this.currentPos = nextPos;
+      this.currentPipe = nextPipe;
+
+      if (nextPos[0] === this.destinationPos[0]
+        && nextPos[1] === this.destinationPos[1]) {
+          clearInterval(interval);
+          return "winner";
+        }
+    } else {
+      clearInterval(interval);
+      return "game over";
+    }
+    return "continue";
+  }
+`````
+
 ### Game
 
 The Game class joins together Pipes and Board to create Pipe Mania. Game keeps an array of the next three Pipe sections to be put on the Board. Using keyboard event listeners, Game updates the current selected position on the Board and determines whether the grid position is available for the player to place a new Pipe section. Game also controls the timer to countdown time until water begins flowing and calls Board to evaulate the result of the round once this time runs out. Based on the result from Board, Game allows players to continue on the to next level, retry a level, or play again starting from the first level.
